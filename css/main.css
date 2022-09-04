@@ -120,16 +120,31 @@ button {
   background-repeat: no-repeat;
   line-height: 1.2;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .offerings {
+    background-image: url(../images/mobile/offers/bg-offers-480-2-min.png);
+  }
+}
 @media screen and (min-width: 768px) {
   .offerings {
     padding-top: 21px;
     background-image: url(../images/tablet/offers/bg-offers-tablet-1-min.png);
   }
 }
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .offerings {
+    background-image: url(../images/tablet/offers/bg-offers-tablet-2-min.png);
+  }
+}
 @media screen and (min-width: 1280px) {
   .offerings {
     padding-top: 177px;
     background-image: url(../images/desktop/offers/bg-offers-desktop-1-min.png);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .offerings {
+    background-image: url(../images/desktop/offers/bg-offers-desktop-2-min.png);
   }
 }
 .offerings .container {
