@@ -1,4 +1,39 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+@keyframes changeItemPosition {
+  0% {
+    transform: rotate(-15deg);
+  }
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  60% {
+    transform: rotate(-15deg);
+  }
+  70% {
+    transform: rotate(15deg);
+  }
+  80% {
+    transform: rotate(-15deg);
+  }
+  90% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: none;
+  }
+}
 html {
   box-sizing: border-box;
 }
@@ -423,17 +458,16 @@ button {
   height: 282px;
   border: 11px solid rgb(255, 229, 80);
   border-radius: 50%;
-  transition-property: transform;
+  transition: border-color 100ms linear, transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .favorites-list__item:active {
   border-color: rgb(187, 243, 48);
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
-@media screen and (min-width: 1280px) {
-  .favorites-list__item:hover {
-    border-color: rgb(187, 243, 48);
-    transform: scale(1.1);
-  }
+.favorites-list__item:active img {
+  animation-name: changeItemPosition;
+  animation-duration: 500ms;
+  animation-delay: 250ms;
 }
 @media screen and (min-width: 768px) {
   .favorites-list__item {
@@ -447,6 +481,15 @@ button {
     width: 395px;
     height: 397px;
     border: 16px solid rgb(255, 229, 80);
+  }
+  .favorites-list__item:hover {
+    border-color: rgb(187, 243, 48);
+    transform: scale(1.15);
+  }
+  .favorites-list__item:hover img {
+    animation-name: changeItemPosition;
+    animation-duration: 500ms;
+    animation-delay: 250ms;
   }
 }
 .favorites-list__item:nth-child(2), .favorites-list__item:nth-child(5) {
